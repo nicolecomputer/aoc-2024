@@ -4,5 +4,5 @@
   "deno.unstable": false,
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "denoland.vscode-deno"
+  "[typescript]": { "editor.defaultFormatter": "denoland.vscode-deno" }
 }
