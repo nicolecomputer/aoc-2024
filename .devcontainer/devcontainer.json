@@ -1,12 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+// README at: https://github.com/devcontainers/templates/tree/main/src/alpine
 {
-  "name": "Debian",
+  "name": "Alpine",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "image": "mcr.microsoft.com/devcontainers/base:alpine-3.18",
   "features": {
-    "ghcr.io/devcontainers-community/features/deno:1": {
-      "version": "latest"
+    "ghcr.io/cirolosapio/devcontainers-features/alpine-deno:0": {
+      "initZsh": true
     }
   },
 
@@ -16,13 +16,15 @@
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
 
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "uname -a",
+
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {
-      "extensions": ["denoland.vscode-deno"]
+      "extensions": ["denoland.vscode-deno", "jasonrudolph.significant-other", "eamodio.gitlens"]
     }
   }
-
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   // "remoteUser": "root"
 }
