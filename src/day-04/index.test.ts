@@ -1,6 +1,6 @@
 import { assertEquals } from "https://deno.land/std@0.208.0/assert/mod.ts";
 
-import { part1, scoreCard } from "./index.ts";
+import { part1, part2, scoreCard } from "./index.ts";
 
 const input = `Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
 Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19
@@ -55,6 +55,6 @@ Deno.test("scoreCard should score a card string example 6", () => {
     );
 });
 
-// Deno.test("part2", () => {
-//     assertEquals(part2(input), 2286);
-// });
+Deno.test("part2", () => {
+    assertEquals(part2(input), 30);
+});
